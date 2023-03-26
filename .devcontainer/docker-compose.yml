@@ -1,0 +1,12 @@
+services:
+  dev:
+    image: mcr.microsoft.com/devcontainers/base:ubuntu
+    volumes:
+      - type: bind
+        source: ..
+        target: /workspace
+        consistency: cached
+    init: true
+    command:
+      - sleep
+      - inf
